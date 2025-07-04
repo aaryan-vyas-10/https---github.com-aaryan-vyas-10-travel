@@ -11,17 +11,107 @@
             font-family: sans-serif;
         }
 
-        .home {
-            /* border: 1px solid red; */
-            width: 100%;
-            /* 106px more */
-            min-height: 5814px;
-            background-color: rgba(255, 255, 255, 1);
-            box-sizing: border-box;
+        body {
+            overflow-x: hidden;
+            /* box-sizing: border-box; */
         }
 
+        /* header Section */
+        header {
+            /* border: 1px solid green; */
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1;
+            position: absolute;
+            top: 24px;
+        }
+
+        .container {
+            max-width: 1320px;
+            width: 90%;
+            margin: 0px auto;
+            /* border: 2px solid red; */
+        }
+
+        header .navbar {
+            height: 80px;
+            /* border: 1px solid orange; */
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .navbar .logo {
+            width: 138px;
+            height: 40px;
+            /* border: 1px solid red; */
+        }
+
+        header .navbar ul {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 30px;
+            height: 24px;
+            /* border: 1px solid red; */
+        }
+
+        header .navbar ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 19px;
+        }
+
+        header .navbar ul li a.active {
+            color: rgba(236, 145, 5, 1);
+        }
+
+        header .navbar .drop-down {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            color: #fff;
+            cursor: pointer;
+            /* border: 1px solid red; */
+        }
+
+        header .navbar .drop-down p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        header .navbar .drop-down .login-btn {
+            background-color: rgba(236, 145, 5, 1);
+            padding: 8px 16px 8px 16px;
+            border-radius: 100px;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        header .navbar .drop-down .language {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        header .navbar .drop-down .language p {
+            font-weight: 500;
+            line-height: 24px;
+            font-size: 16px;
+        }
+
+        header .navbar .drop-down .language .down-arrow {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Hero Section */
         .hero {
-            /* width: 1728px; */
             width: 100%;
             height: 900px;
             /* background-image : linear-gradient(direction,color1,color2) -> default follow the top / down colro apply */
@@ -32,90 +122,6 @@
             position: relative;
             box-sizing: border-box;
             /* border: 1px solid red; */
-        }
-
-        header {
-            /* border: 1px solid red; */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            justify-content: space-between;
-            width: 1320px;
-            height: 80px;
-            position: absolute;
-            top: 24px;
-            left: 50%;
-            transform: translateX(-50%);
-            /* margin: 24px auto; */
-            box-sizing: border-box;
-        }
-
-        header .logo {
-            width: 138px;
-            height: 40px;
-            /* border: 1px solid red; */
-        }
-
-        header ul {
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            list-style: none;
-            gap: 30px;
-            height: 24px;
-            /* border: 1px solid red; */
-        }
-
-        header ul li a {
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            color: #fff;
-            line-height: 19px;
-        }
-
-        header ul li a.active {
-            color: rgba(236, 145, 5, 1);
-        }
-
-        header .drop-down {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            color: #fff;
-            cursor: pointer;
-            /* border: 1px solid red; */
-        }
-
-        header .drop-down p {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 24px;
-        }
-
-        header .drop-down .login-btn {
-            background-color: rgba(236, 145, 5, 1);
-            padding: 8px 16px 8px 16px;
-            border-radius: 100px;
-            cursor: pointer;
-            gap: 4px;
-        }
-
-        header .drop-down .language {
-            display: flex;
-            align-items: center;
-            gap: 2px;
-        }
-
-        header .drop-down .language p {
-            font-weight: 500;
-            line-height: 24px;
-            font-size: 16px;
-        }
-
-        header .drop-down .language .down-arrow {
-            width: 16px;
-            height: 16px;
         }
 
         .hero .heroText {
@@ -290,23 +296,19 @@
             width: 100%;
             height: 653px;
             background-color: rgba(254, 245, 230, 1);
-            position: relative;
-
+            display: flex;
+            flex-direction: column;
         }
 
         .trendingDestinations .heading {
-            /* border: 1px solid red; */
+            /* border: 1px solid orange; */
             width: 1320px;
             height: 104px;
-            /* margin: 121px auto 50px auto; */
-            position: absolute;
-            top: 80px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
-            position: relative;
+            padding-top: 121px;
+            margin: 0px auto;
         }
 
         .trendingDestinations .heading .headingText {
@@ -339,14 +341,9 @@
 
         .trendingDestinations .heading .headingBtns {
             /* border: 1px solid red; */
-            position: absolute;
-            top: 0;
-            right: 0;
             width: 92px;
-            /* border: 1px solid red; */
             height: 38px;
             gap: 16px;
-            align-items: center;
             justify-content: center;
             display: flex;
         }
@@ -367,18 +364,15 @@
         }
 
         .trendingDestinations .imageSlider {
-            /* border: 1px solid red; */
+            /* border: 1px solid green; */
             width: 1320px;
             height: 300px;
             gap: 48px;
-            position: absolute;
-            top: 273px;
-            left: 50%;
-            transform: translateX(-50%);
-            /* margin: 0px auto; */
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            padding-top: 48px;
+            margin: 0px auto;
             overflow: auto;
             /* scroll-behavior: smooth; */
         }
@@ -426,10 +420,10 @@
             max-width: 1320px;
             height: 549px;
             /* border: 2px solid green; */
-            margin: 100px auto;
+            margin: 80px auto;
             display: flex;
-            /* align-items: center; */
             justify-content: space-between;
+            box-sizing: border-box;
         }
 
         .adventureSection .advantureContent .adventureInformation .advantureSearch,
@@ -599,23 +593,84 @@
             /* border: 1px solid red; */
             width: 100%;
             height: 830px;
-            position: relative;
+            background-color: rgba(254, 245, 230, 1);
         }
 
         .tourPackages .packages {
             /* border: 1px solid red; */
             width: 1320px;
             height: 518px;
-            position: absolute;
-            top: 236px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
+            padding: 3px;
             gap: 30px;
-            padding: 10px;
+            padding-top: 48px;
             overflow: auto;
-            /* z-index: 1; */
-            /* margin: 160px auto; */
+        }
+
+        .tourPackages .heading {
+            padding-top: 80px;
+        }
+
+        .tourPackages .container .heading {
+            /* border: 1px solid orange; */
+            width: 1320px;
+            height: 104px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .tourPackages .container .heading .headingText {
+            /* border: 1px solid red; */
+            width: 645px;
+            height: 104px;
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .tourPackages .container .heading .headingText h1 {
+            /* border: 1px solid red; */
+            font-size: 40px;
+            /* padding: 40px 0px; */
+            font-weight: 700;
+            line-height: 48px;
+            color: rgba(45, 44, 47, 1);
+        }
+
+        .tourPackages .container .heading .headingText p {
+            /* border: 1px solid red; */
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0px;
+        }
+
+        .tourPackages .container .heading .headingBtns {
+            /* border: 1px solid red; */
+            width: 92px;
+            height: 38px;
+            gap: 16px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .tourPackages .container .heading .headingBtns button {
+            width: 92px;
+            height: 38px;
+            border-radius: 100px;
+            border: 1px solid rgba(32, 35, 38, 1);
+            padding: 8px;
+            display: flex;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .tourPackages .container .heading .headingBtns .headingBtn2 {
+            background-color: rgba(32, 35, 38, 1);
         }
 
         .tourPackages .packages::-webkit-scrollbar {
@@ -912,19 +967,14 @@
         .destinations {
             /* border: 2px solid red; */
             width: 100%;
-            /* position: relative; */
             background-color: white;
         }
 
-        .destinations .container {
+        .destinations .destinationContent {
             width: 1320px;
-            min-height: 890px;
-            /* border: 2px solid blue; */
-            /* position: absolute;
-            top: 100px;
-            left: 50%;
-            transform: translateX(-50%); */
-            margin: 100px auto;
+            height: 890px;
+            margin: 80px auto;
+            /* border: 1px solid green; */
         }
 
         .destinations .container .heading {
@@ -1325,10 +1375,17 @@
         /* css for the testimonilas */
         .testimonial {
             /* border: 1px solid red; */
-            width: 1320px;
+            width: 100%;
             height: 360px;
             margin: 100px auto;
             display: flex;
+        }
+
+        .testimonial .testimonialContent {
+            height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .testimonial .leftContent {
@@ -1679,21 +1736,14 @@
             background-color: rgba(254, 245, 230, 1);
             /* border: 1px solid red; */
             /* padding: 1px; */
-            box-sizing: border-box;
-            position: relative;
         }
 
-        .blogSection .container {
+        .blogSection .blogContent {
             width: 1320px;
             /* border: 1px solid green; */
             height: 832px;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            /* margin: 0px auto; */
-            box-sizing: border-box;
-
+            display: flex;
+            flex-direction: column;
         }
 
         .blogSection .blogHeading {
@@ -1701,12 +1751,10 @@
             /* margin: 100px auto 50px auto; */
             width: 1320px;
             height: 80px;
-            position: absolute;
-            top: 80px;
+            padding-top: 80px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
-            box-sizing: border-box;
         }
 
         .blogSection .blogHeading .text {
@@ -1739,9 +1787,6 @@
 
         .blogSection .blogHeading .indicators {
             /* border: 1px solid red; */
-            position: absolute;
-            top: 0;
-            right: 0;
             width: 92px;
             /* border: 1px solid red; */
             height: 38px;
@@ -1762,16 +1807,14 @@
             cursor: pointer;
         }
 
-        .blogSection .container .blogs {
+        .blogSection .blogContent .blogs {
             /* border: 1px solid red; */
             width: 1320px;
             height: 544px;
             display: flex;
-            align-items: flex-start;
-            position: absolute;
-            top: 208px;
-            gap: 20px;
-            box-sizing: border-box;
+            padding-top: 48px;
+            gap: 30px;
+            /* align-items: flex-start; */
         }
 
         .blogSection .container .blogs .blog:hover {
@@ -1852,17 +1895,17 @@
             padding: 8px 16px 8px 4px;
             display: flex;
             flex-direction: column;
-            /* align-items: center; */
-            /* justify-content: center; */
+            align-items: center;
+            justify-content: center;
             gap: 4px;
             border: none;
             background: transparent;
             cursor: pointer;
             box-sizing: border-box;
-            margin: 50px 0px;
+            margin: 40px 16px;
         }
 
-        .blogSection .container .blogs .blog button p {
+        .blogSection .container button p {
             width: 99px;
             /* border: 1px solid red; */
             height: 30px;
@@ -1872,11 +1915,7 @@
             color: rgba(236, 145, 5, 1);
         }
 
-        .blogSection .container .blogs .allBlogButton {
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
+        .blogSection .container .allBlogButton {
             width: 187px;
             height: 46px;
             border-radius: 100px;
@@ -1893,6 +1932,7 @@
             line-height: 30px;
             color: rgba(255, 255, 255, 1);
             cursor: pointer;
+            margin: 0px auto;
         }
 
         /* css for the footer section */
@@ -1901,23 +1941,23 @@
             width: 100%;
             height: 400px;
             background-color: rgba(32, 35, 38, 1);
-            padding: 1px;
             box-sizing: border-box;
-            position: relative;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .footer .container {
+        .footer .footerContent {
             /* border: 1px solid green; */
             max-width: 1320px;
             width: 100%;
-            margin: 30px auto;
+            margin: 48px auto;
             display: flex;
             justify-content: space-between;
             box-sizing: border-box;
         }
 
-        .footer .container .footerLogo {
+        .footer .footerContent .footerLogo {
             /* border: 1px solid orange; */
             width: 420px;
             height: 168px;
@@ -1927,12 +1967,12 @@
             align-items: flex-start;
         }
 
-        .footer .container .footerLogo .logo {
+        .footer .footerContent .footerLogo .logo {
             width: 138px;
             height: 40px;
         }
 
-        .footer .container .footerLogo p {
+        .footer .footerContent .footerLogo p {
             width: 420px;
             height: 96px;
             opacity: 76%;
@@ -1942,7 +1982,7 @@
             line-height: 24px;
         }
 
-        .footer .container .footerLogo .socialIcons {
+        .footer .footerContent .footerLogo .socialIcons {
             /* border: 1px solid red; */
             width: 296px;
             height: 40px;
@@ -1951,7 +1991,7 @@
             align-items: center;
         }
 
-        .footer .container .footerLogo .socialIcons button {
+        .footer .footerContent .footerLogo .socialIcons button {
             width: 40px;
             height: 40px;
             border-radius: 8px;
@@ -1965,7 +2005,7 @@
             cursor: pointer;
         }
 
-        .footer .container .footerLinks {
+        .footer .footerContent .footerLinks {
             /* border: 1px solid red; */
             display: flex;
             align-items: center;
@@ -1976,7 +2016,7 @@
             gap: 32px;
         }
 
-        .footer .container .footerLinks h4 {
+        .footer .footerContent .footerLinks h4 {
             /* border: 1px solid red; */
             width: 195px;
             height: 24px;
@@ -1986,7 +2026,7 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        .footer .container .footerLinks ul {
+        .footer .footerContent .footerLinks ul {
             list-style: none;
             width: 195px;
             height: 14px;
@@ -1996,7 +2036,7 @@
             /* align-items: center; */
         }
 
-        .footer .container .footerLinks ul li a {
+        .footer .footerContent .footerLinks ul li a {
             opacity: 76%;
             font-weight: 500;
             font-size: 16px;
@@ -2006,7 +2046,7 @@
             /* border: 1px solid red; */
         }
 
-        .footer .container .newsletter {
+        .footer .footerContent .newsletter {
             /* border: 1px solid red; */
             width: 420px;
             height: 168px;
@@ -2016,7 +2056,7 @@
             align-items: center;
         }
 
-        .footer .container .newsletter h4 {
+        .footer .footerContent .newsletter h4 {
             width: 420px;
             height: 24px;
             font-weight: 700;
@@ -2025,7 +2065,7 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        .footer .container .newsletter .form {
+        .footer .footerContent .newsletter .form {
             width: 420px;
             height: 112px;
             gap: 16px;
@@ -2034,7 +2074,7 @@
 
         }
 
-        .footer .container .newsletter .form p {
+        .footer .footerContent .newsletter .form p {
             width: 420px;
             height: 48px;
             opacity: 76%;
@@ -2044,7 +2084,7 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        .footer .container .newsletter form {
+        .footer .footerContent .newsletter form {
             /* border: 2px solid red; */
             width: 420px;
             height: 48px;
@@ -2055,7 +2095,7 @@
             border-radius: 4px;
         }
 
-        .footer .container .newsletter form input {
+        .footer .footerContent .newsletter form input {
             width: 420px;
             height: 48px;
 
@@ -2068,7 +2108,7 @@
             color: rgba(242, 245, 247, 1);
         }
 
-        .footer .container .newsletter form input::placeholder {
+        .footer .footerContent .newsletter form input::placeholder {
             width: 388px;
             height: 24px;
             opacity: 76%;
@@ -2079,7 +2119,7 @@
             box-sizing: border-box;
         }
 
-        .footer .container .newsletter form button {
+        .footer .footerContent .newsletter form button {
             width: 38px;
             height: 38px;
             border-radius: 4px;
@@ -2100,15 +2140,19 @@
             width: 100%;
             box-sizing: border-box;
             height: 48px;
-            bottom: 0px;
-            position: absolute;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-top: 1px solid rgba(58, 76, 89, 1);
         }
 
-        .footer .footerBottom .container span {
+        .footer .footerBottom .footerBottomContent {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer .footerBottom .footerBottomContent span {
             /* border: 1px solid orange; */
             width: 333px;
             height: 24px;
@@ -2118,7 +2162,7 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        .footer .footerBottom .container .footerBottomLinks {
+        .footer .footerBottom .footerBottomContent .footerBottomLinks {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2127,7 +2171,7 @@
             gap: 12px;
         }
 
-        .footer .footerBottom .container .footerBottomLinks a {
+        .footer .footerBottom .footerBottomContent .footerBottomLinks a {
             text-decoration: none;
             font-weight: 500;
             font-size: 16px;
@@ -2138,7 +2182,7 @@
 
         @media(max-width:1685px) {
             .hero .indicators {
-                width: 1362px;
+                max-width: 1362px;
             }
         }
 
@@ -2148,11 +2192,7 @@
 
         /* xs -> style for the extra small devices */
         @media (min-width:320px) and (max-width:575px) {
-            header {
-                width: 410px;
-            }
-
-            header ul {
+            header .navbar ul {
                 display: none;
             }
 
@@ -2161,17 +2201,20 @@
             }
 
             .hero .heroText {
-                width: 326px;
-                height: 175px;
+                width: 70%;
+                height: 194px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
             }
 
             .hero .heroText h1 {
-                font-size: 26px;
+                font-size: 30px;
                 line-height: 35px;
             }
 
             .hero .indicators {
-                width: 450px;
+                width: 90%;
                 height: auto;
             }
 
@@ -2275,16 +2318,19 @@
                 font-size: 24px;
                 line-height: 26px;
             }
-            .trendingDestinations .heading .headingText p{
+
+            .trendingDestinations .heading .headingText p {
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;
                 overflow: hidden;
             }
+
             .trendingDestinations .heading {
                 top: 126px;
-                
+
             }
+
             .trendingDestinations .heading .headingBtns {
                 width: 92px;
                 /* border: 1px solid red; */
@@ -2295,6 +2341,7 @@
                 display: flex;
                 position: relative;
             }
+
             .trendingDestinations .imageSlider {
                 top: 314px;
 
@@ -2303,20 +2350,26 @@
 
         /* sm -> styel for the small devices */
         @media (min-width:576px) and (max-width:767px) {
-            header {
-                width: 576px;
+            .container {
+                /* max-width: 576px; */
             }
 
-            header ul {
+            header .navbar ul {
                 display: none;
             }
 
             .hero .heroText {
-                width: 450px;
+                width: 70%;
+                height: 166px;
+            }
+
+            .hero .indicators {
+                width: 95%;
+                height: auto;
             }
 
             .hero .heroText h1 {
-                font-size: 34px;
+                font-size: 30px;
                 line-height: 41px;
             }
 
@@ -2324,14 +2377,50 @@
                 line-height: 18px;
             }
 
-            .hero .indicators {
-                width: 576px;
-                height: 47.68px;
-            }
+
 
             .hero .searchBar {
-                width: 580px;
-                height: 70px;
+                width: 90%;
+                display: flex;
+                align-content: flex-start;
+                flex-wrap: wrap;
+                overflow-y: hidden;
+                overflow-x: auto;
+                flex-direction: column;
+                border-radius: 16px;
+                /* overflow: auto; */
+                /* height: max-content; */
+                gap: 15px 20px;
+            }
+
+            .hero .searchBar::-webkit-scrollbar {
+                display: none;
+            }
+
+            .hero .searchBar img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .hero .searchBar p {
+                font-size: 14px;
+            }
+
+            .hero .searchBar .where,
+            .date,
+            .tour,
+            .searchBtn {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+            }
+
+            .hero .searchBar .searchBtn {
+                width: 100px;
+                height: 38px;
             }
 
             .hero {
@@ -2344,10 +2433,11 @@
             }
 
             .trendingDestinations .heading {
-                width: 90%;
+                width: 95%;
                 height: 104px;
                 display: block;
             }
+
             .trendingDestinations .heading .headingBtns {
                 width: 92px;
                 /* border: 1px solid red; */
@@ -2358,6 +2448,7 @@
                 display: flex;
                 position: relative;
             }
+
             .trendingDestinations .imageSlider {
                 width: 90%;
                 height: 300px;
@@ -2374,24 +2465,24 @@
 
         /* md -> style for the medium devices  */
         @media (min-width:768px) and (max-width:991px) {
-            header {
-                width: 768px;
+            .container {
+                /* max-width: 768px; */
             }
 
-            header ul {
+            header .navbar ul {
                 display: none;
             }
 
             .hero .indicators {
-                width: 768px;
+                width: 95%;
             }
 
             .hero .heroText {
-                width: 600px;
+                width: 70%;
             }
 
             .hero .heroText h1 {
-                font-size: 43px;
+                font-size: 40px;
                 line-height: 55px;
             }
 
@@ -2409,6 +2500,7 @@
                 height: 104px;
                 /* display: block; */
             }
+
             /* .trendingDestinations .heading .headingBtns {
                 border: 1px solid red;
                 width: 92px;
@@ -2429,20 +2521,16 @@
 
         /* lg -> style for the large devices */
         @media(min-width:992px) and (max-width:1199px) {
-            header {
-                width: 900px;
-            }
-
-            header ul {
+            header .navbar ul {
                 display: none;
             }
 
             .hero .indicators {
-                width: 950px;
+                width: 95%;
             }
 
             .hero .heroText {
-                width: 750px;
+                width: 70%;
             }
 
             .hero .heroText h1 {
@@ -2455,6 +2543,7 @@
                 height: 104px;
                 /* display: block; */
             }
+
             /* .trendingDestinations .heading .headingBtns {
                 border: 1px solid red;
                 width: 92px;
@@ -2474,20 +2563,21 @@
 
         /* xl -> style for extra large devices  */
         @media(min-width:1200px) and (max-width:1399px) {
-            header {
-                width: 1110px;
+            .container {
+                /* max-width: 1110px; */
+
             }
 
             .hero .indicators {
-                width: 1150px;
+                width: 95%;
             }
 
             .hero .heroText {
-                width: 850px;
+                width: 70%;
             }
 
             .hero .heroText h1 {
-                font-size: 52px;
+                font-size: 60px;
                 line-height: 65px;
             }
 
@@ -2520,108 +2610,102 @@
 
         @media(max-width:452px) {
             .hero .indicators {
-                width: 320px;
+                width: 95%;
                 height: auto;
             }
 
             .hero .heroText {
-                width: 159px;
-                height: auto;
+                width: 70%;
+                height: 244px;
             }
 
             .hero .heroText {
-                width: 190px;
+                width: 70%;
                 height: auto;
             }
 
-            header .drop-down .language {
+            header .navbar .drop-down .language {
                 display: none;
             }
 
-            header .drop-down p {
+            header .navbar .drop-down p {
                 display: none;
             }
 
-            header {
-                width: 320px;
-                /* height: auto; */
-            }
-
-            .hero .heroText h1 {
-                font-size: 24px;
+            .hero .container .heroText h1 {
+                /* font-size: 24px; */
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="home">
-        <section class="hero">
-            <div class="container">
-                <!-- header section -->
-                <header>
-                    <img src="img/Logo.png" alt="travel website logo" class="logo" />
-                    <ul>
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Destinations</a></li>
-                        <li><a href="#">Tours</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                    <div class="drop-down">
-                        <div class="language">
-                            <p>USD</p>
-                            <img class="down-arrow" src="img/drop-down.png" alt="drop-down" />
-                        </div>
-                        <p>sign up</p>
-                        <img class="login-btn" src="img/Button.png" alt="login Button" />
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <img src="img/Logo.png" alt="travel website logo" class="logo" />
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Tours</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="drop-down">
+                    <div class="language">
+                        <p>USD</p>
+                        <img class="down-arrow" src="img/drop-down.png" alt="drop-down" />
                     </div>
-                </header>
-
-                <!-- left and right indicators -->
-                <div class="indicators">
-                    <button><img src="img/left-arrow.png" alt="left-arrow" class="leftArrow" /></button>
-                    <button><img src="img/right-arrow.png" alt="right-arrow" class="rightArrow" /></button>
+                    <p>sign up</p>
+                    <img class="login-btn" src="img/Button.png" alt="login Button" />
                 </div>
-                <!-- heroText section -->
-                <section class="heroText">
-                    <p>Seamless Booking: 15,000+ Multi-Day Adventures Await</p>
-                    <h1>Await Your Exploration with Tailored Tours & Packages</h1>
-                </section>
-
-                <!-- search bar -->
-                <section class="searchBar">
-                    <div class="where">
-                        <img src="img/where.png" alt="where image" />
-                        <div class="whereContent">
-                            <p>Where</p>
-                            <span>Search destinations</span>
-                        </div>
-                    </div>
-                    <div class="date">
-                        <img src="img/date.png" alt="where image" />
-                        <div class="dateContent">
-                            <p>Date</p>
-                            <span>choose Date</span>
-                        </div>
-                    </div>
-                    <div class="tour">
-                        <img src="img/tour.png" alt="where image" />
-                        <div class="tourContent">
-                            <p>Tour Type</p>
-                            <span>All Tour</span>
-                        </div>
-                    </div>
-                    <button class="searchBtn">
-                        <img src="img/bx-search-alt.png" class="searchIcon" alt="search icon" />
-                        <p>Search</p>
-                    </button>
-                </section>
             </div>
+        </div>
+    </header>
+    <section class="hero">
+        <!-- <div class="container"> -->
+        <div class="indicators">
+            <button><img src="img/left-arrow.png" alt="left-arrow" class="leftArrow" /></button>
+            <button><img src="img/right-arrow.png" alt="right-arrow" class="rightArrow" /></button>
+        </div>
+
+        <section class="heroText">
+            <p>Seamless Booking: 15,000+ Multi-Day Adventures Await</p>
+            <h1>Await Your Exploration with Tailored Tours & Packages</h1>
         </section>
 
-        <!-- Trending Destinations Section -->
-        <section class="trendingDestinations">
+        <section class="searchBar">
+            <div class="where">
+                <img src="img/where.png" alt="where image" />
+                <div class="whereContent">
+                    <p>Where</p>
+                    <span>Search destinations</span>
+                </div>
+            </div>
+            <div class="date">
+                <img src="img/date.png" alt="where image" />
+                <div class="dateContent">
+                    <p>Date</p>
+                    <span>choose Date</span>
+                </div>
+            </div>
+            <div class="tour">
+                <img src="img/tour.png" alt="where image" />
+                <div class="tourContent">
+                    <p>Tour Type</p>
+                    <span>All Tour</span>
+                </div>
+            </div>
+            <button class="searchBtn">
+                <img src="img/bx-search-alt.png" class="searchIcon" alt="search icon" />
+                <p>Search</p>
+            </button>
+        </section>
+        <!-- </div> -->
+    </section>
+
+    <!-- <section class="trendingDestinations">
+        <div class="container">
             <div class="heading">
                 <div class="headingText">
                     <h1>Trending Destinations</h1>
@@ -2676,10 +2760,12 @@
                     <p>Dubai</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Adventure Section -->
-        <!-- <section class="adventureSection">
+    </section> -->
+
+    <!-- <section class="adventureSection">
+        <div class="container">
             <div class="advantureContent">
                 <div class="adventureInformation">
                     <div class="adventureHeading">
@@ -2728,10 +2814,12 @@
                     <img class="advanturePersonImage" src="img/person.png" alt="women with the bag" />
                 </div>
             </div>
-        </section> -->
+        </div>
+    </section> -->
 
-        <!-- Tour Section -->
-        <!-- <section class="tourPackages trendingDestinations">
+
+    <!-- <section class="tourPackages">
+        <div class="container">
             <div class="heading tourHeading">
                 <div class="headingText">
                     <h1>Popular Tour Packages</h1>
@@ -2761,7 +2849,7 @@
                                 <p class="day">6 Days</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                         <div class="packageInclude">
                             <div class="include">
@@ -2789,7 +2877,7 @@
                                 <p>6 Activities</p>
                             </div>
                         </div>
-               
+
                         <hr class="line">
                     </div>
                     <div class="tourPrice">
@@ -2804,9 +2892,9 @@
                             <img src="img/tour-right-Arrow.png" alt="" />
                         </button>
                     </div>
-                   
+
                     <img src="img/bx-heart.png" alt="like iocn for packages" class="likeIcon" />
-                    
+
                 </div>
                 <div class="packageCard">
                     <img src="img/p2.png" alt="package image1" />
@@ -2825,7 +2913,7 @@
                                 <p class="day">8 Days</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                         <div class="packageInclude">
                             <div class="include">
@@ -2853,7 +2941,7 @@
                                 <p>2 Activities</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                     </div>
                     <div class="tourPrice">
@@ -2868,9 +2956,9 @@
                             <img src="img/tour-right-Arrow.png" alt="" />
                         </button>
                     </div>
-                   
+
                     <img src="img/bx-heart.png" alt="like iocn for packages" class="likeIcon" />
-                    
+
                 </div>
                 <div class="packageCard">
                     <img src="img/p3.png" alt="package image1" />
@@ -2889,7 +2977,7 @@
                                 <p class="day">5 Days</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                         <div class="packageInclude">
                             <div class="include">
@@ -2917,7 +3005,7 @@
                                 <p>4 Activities</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                     </div>
                     <div class="tourPrice">
@@ -2932,9 +3020,9 @@
                             <img src="img/tour-right-Arrow.png" alt="" />
                         </button>
                     </div>
-                   
+
                     <img src="img/bx-heart.png" alt="like iocn for packages" class="likeIcon" />
-                    
+
                 </div>
                 <div class="packageCard">
                     <img src="img/p1.png" alt="package image1" />
@@ -2953,7 +3041,7 @@
                                 <p class="day">4 Days</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                         <div class="packageInclude">
                             <div class="include">
@@ -2981,7 +3069,7 @@
                                 <p>3 Activities</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                     </div>
                     <div class="tourPrice">
@@ -2996,9 +3084,9 @@
                             <img src="img/tour-right-Arrow.png" alt="" />
                         </button>
                     </div>
-                   
+
                     <img src="img/bx-heart.png" alt="like iocn for packages" class="likeIcon" />
-                    
+
                 </div>
                 <div class="packageCard">
                     <img src="img/p2.png" alt="package image1" />
@@ -3017,7 +3105,7 @@
                                 <p class="day">9 Days</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                         <div class="packageInclude">
                             <div class="include">
@@ -3045,7 +3133,7 @@
                                 <p>12 Activities</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                     </div>
                     <div class="tourPrice">
@@ -3060,9 +3148,9 @@
                             <img src="img/tour-right-Arrow.png" alt="" />
                         </button>
                     </div>
-                   
+
                     <img src="img/bx-heart.png" alt="like iocn for packages" class="likeIcon" />
-                    
+
                 </div>
                 <div class="packageCard">
                     <img src="img/p3.png" alt="package image1" />
@@ -3081,7 +3169,7 @@
                                 <p class="day">9 Days</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                         <div class="packageInclude">
                             <div class="include">
@@ -3109,7 +3197,7 @@
                                 <p>6 Activities</p>
                             </div>
                         </div>
-                        
+
                         <hr class="line">
                     </div>
                     <div class="tourPrice">
@@ -3124,16 +3212,16 @@
                             <img src="img/tour-right-Arrow.png" alt="" />
                         </button>
                     </div>
-                   
+
                     <img src="img/bx-heart.png" alt="like iocn for packages" class="likeIcon" />
-                    
                 </div>
             </div>
-        </section> -->
+        </div>
+    </section> -->
 
-        <!-- Top Destination -->
-        <!-- <section class="destinations">
-            <div class="container">
+    <!-- <section class="destinations">
+        <div class="container">
+            <div class="destinationContent">
                 <div class="heading">
                     <div class="text">
                         <h1>Top Destination</h1>
@@ -3221,157 +3309,160 @@
                 <button>
                     All Destination <img src="img/destination-arrow.png" alt="" />
                 </button>
-
-             
-                <section class="testimonial">
-                    <div class="leftContent">
-                        <div class="testimonialHeading">
-                            <div class="text">
-                                <h1>What our customers are <br> saying us?</h1>
-                                <p>Don't just take our word for it. See what our travelers have to say about their
-                                    incredible journeys with us.</p>
-                            </div>
-                        </div>
-                        <div class="customersAndRating">
-                            <div class="happyCustomers">
-                                <h1>8.5M+</h1>
-                                <p>Happy Customers</p>
-                            </div>
-                            <div class="rating">
-                                <div class="frame">
-                                    <h1>4.8</h1>
-                                    <img src="img/star.png" alt="" />
-                                </div>
-                                <p>Overall Rating</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="customerMessages">
-                        <div class="message active">
-                            <div class="review">
-                                <div class="userAndMessages">
-                                    <div class="userAndRate">
-                                        <div class="user">
-                                            <img src="img/user-1.png" alt="" />
-                                            <div class="name">
-                                                <h1>Esther Howard</h1>
-                                                <p>New York, USA</p>
-                                            </div>
-                                            <div class="rate">
-                                                <img src="img/Star.png" alt="" />
-                                                <p>4.7</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="userMessage">
-                                        <p>Our trip to Kerala with Travel was absolutely magical! The itinerary was
-                                            perfectly planned, and our guide, Smith, was incredibly knowledgeable and
-                                            friendly. The houseboat stay was a highlight, and the food was delicious. We
-                                            highly recommend this company to anyone looking for a memorable experience.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="indicaters">
-                                    <div class="count">
-                                        <p>01</p>
-                                    </div>
-                                    <div class="stepper">
-                                        <div class="activeStepper"></div>
-                                        <div class="mainStepper"></div>
-                                    </div>
-                                    <div class="count">
-                                        <p>03</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message">
-                            <div class="review">
-                                <div class="userAndMessages">
-                                    <div class="userAndRate">
-                                        <div class="user">
-                                            <img src="img/user-2.png" alt="" />
-                                            <div class="name">
-                                                <h1>Jenny Wilson</h1>
-                                                <p>London, England</p>
-                                            </div>
-                                            <div class="rate">
-                                                <img src="img/Star.png" alt="" />
-                                                <p>4.7</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="userMessage">
-                                        <p>I had the most amazing solo backpacking adventure through Ladakh with Travel.
-                                            The
-                                            accommodations were comfortable, the transportation was reliable, and the
-                                            local
-                                            experiences were authentic. The company was also very responsive and helpful
-                                            with any questions or concerns I had. Definitely recommend!</p>
-                                    </div>
-                                </div>
-                                <div class="indicaters">
-                                    <div class="count">
-                                        <p>02</p>
-                                    </div>
-                                    <div class="stepper">
-                                        <div class="activeStepper current"></div>
-                                        <div class="mainStepper currenMain"></div>
-                                    </div>
-                                    <div class="count">
-                                        <p>03</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message">
-                            <div class="review">
-                                <div class="userAndMessages">
-                                    <div class="userAndRate">
-                                        <div class="user">
-                                            <img src="img/user-3.png" alt="" />
-                                            <div class="name">
-                                                <h1>Kathryn Murphy</h1>
-                                                <p>Delhi, India</p>
-                                            </div>
-                                            <div class="rate">
-                                                <img src="img/Star.png" alt="" />
-                                                <p>4.7</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="userMessage">
-                                        <p>We booked a family vacation to Rajasthan with Travel and it exceeded our
-                                            expectations. The kids loved the camel safari and the elephant ride. Our
-                                            guide,
-                                            Smith, was patient and engaging. The forts and palaces were breathtaking. It
-                                            was
-                                            a truly unforgettable experience.</p>
-                                    </div>
-                                </div>
-                                <div class="indicaters">
-                                    <div class="count">
-                                        <p>03</p>
-                                    </div>
-                                    <div class="stepper">
-                                        <div class="activeStepper current1"></div>
-                                        <div class="mainStepper currentMain1"></div>
-                                    </div>
-                                    <div class="count">
-                                        <p>03</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
             </div>
-        </section> -->
+        </div>
+    </section> -->
+    <!-- <section class="testimonial">
+        <div class="container">
+            <div class="testimonialContent">
+                <div class="leftContent">
+                    <div class="testimonialHeading">
+                        <div class="text">
+                            <h1>What our customers are <br> saying us?</h1>
+                            <p>Don't just take our word for it. See what our travelers have to say about their
+                                incredible journeys with us.</p>
+                        </div>
+                    </div>
+                    <div class="customersAndRating">
+                        <div class="happyCustomers">
+                            <h1>8.5M+</h1>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="rating">
+                            <div class="frame">
+                                <h1>4.8</h1>
+                                <img src="img/star.png" alt="" />
+                            </div>
+                            <p>Overall Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="customerMessages">
+                    <div class="message active">
+                        <div class="review">
+                            <div class="userAndMessages">
+                                <div class="userAndRate">
+                                    <div class="user">
+                                        <img src="img/user-1.png" alt="" />
+                                        <div class="name">
+                                            <h1>Esther Howard</h1>
+                                            <p>New York, USA</p>
+                                        </div>
+                                        <div class="rate">
+                                            <img src="img/Star.png" alt="" />
+                                            <p>4.7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="userMessage">
+                                    <p>Our trip to Kerala with Travel was absolutely magical! The itinerary was
+                                        perfectly planned, and our guide, Smith, was incredibly knowledgeable and
+                                        friendly. The houseboat stay was a highlight, and the food was delicious. We
+                                        highly recommend this company to anyone looking for a memorable experience.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="indicaters">
+                                <div class="count">
+                                    <p>01</p>
+                                </div>
+                                <div class="stepper">
+                                    <div class="activeStepper"></div>
+                                    <div class="mainStepper"></div>
+                                </div>
+                                <div class="count">
+                                    <p>03</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="review">
+                            <div class="userAndMessages">
+                                <div class="userAndRate">
+                                    <div class="user">
+                                        <img src="img/user-2.png" alt="" />
+                                        <div class="name">
+                                            <h1>Jenny Wilson</h1>
+                                            <p>London, England</p>
+                                        </div>
+                                        <div class="rate">
+                                            <img src="img/Star.png" alt="" />
+                                            <p>4.7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="userMessage">
+                                    <p>I had the most amazing solo backpacking adventure through Ladakh with Travel.
+                                        The
+                                        accommodations were comfortable, the transportation was reliable, and the
+                                        local
+                                        experiences were authentic. The company was also very responsive and helpful
+                                        with any questions or concerns I had. Definitely recommend!</p>
+                                </div>
+                            </div>
+                            <div class="indicaters">
+                                <div class="count">
+                                    <p>02</p>
+                                </div>
+                                <div class="stepper">
+                                    <div class="activeStepper current"></div>
+                                    <div class="mainStepper currenMain"></div>
+                                </div>
+                                <div class="count">
+                                    <p>03</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="review">
+                            <div class="userAndMessages">
+                                <div class="userAndRate">
+                                    <div class="user">
+                                        <img src="img/user-3.png" alt="" />
+                                        <div class="name">
+                                            <h1>Kathryn Murphy</h1>
+                                            <p>Delhi, India</p>
+                                        </div>
+                                        <div class="rate">
+                                            <img src="img/Star.png" alt="" />
+                                            <p>4.7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="userMessage">
+                                    <p>We booked a family vacation to Rajasthan with Travel and it exceeded our
+                                        expectations. The kids loved the camel safari and the elephant ride. Our
+                                        guide,
+                                        Smith, was patient and engaging. The forts and palaces were breathtaking. It
+                                        was
+                                        a truly unforgettable experience.</p>
+                                </div>
+                            </div>
+                            <div class="indicaters">
+                                <div class="count">
+                                    <p>03</p>
+                                </div>
+                                <div class="stepper">
+                                    <div class="activeStepper current1"></div>
+                                    <div class="mainStepper currentMain1"></div>
+                                </div>
+                                <div class="count">
+                                    <p>03</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
-        <!-- Blog Section -->
-        <!-- <section class="blogSection">
-            <div class="container">
+
+    <!-- <section class="blogSection">
+        <div class="container">
+            <div class="blogContent">
                 <div class="blogHeading">
                     <div class="text">
                         <h1>The Travel Blog</h1>
@@ -3424,16 +3515,18 @@
                             <p>Read More</p>
                         </button>
                     </div>
-                    <button class="allBlogButton">
-                        View All Blogs <img src="img/destination-arrow.png" alt="" />
-                    </button>
-                </div>
-            </div>
-        </section> -->
 
-        <!-- Footer Section -->
-        <!-- <footer class="footer">
-            <div class="container">
+                </div>
+                <button class="allBlogButton">
+                    View All Blogs <img src="img/destination-arrow.png" alt="" />
+                </button>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <footer class="footer">
+        <div class="container">
+            <div class="footerContent">
                 <div class="footerLogo">
                     <img class="logo" src="img/Logo.png" alt="" />
                     <p>We're passionate travel experts dedicated to curating unforgettable journeys. With years of
@@ -3474,11 +3567,12 @@
                             <button type="submit"><img src="img/send-btn.png" /></button>
                         </form>
                     </div>
-
                 </div>
             </div>
-            <div class="footerBottom">
-                <div class="container">
+        </div>
+        <div class="footerBottom">
+            <div class="container">
+                <div class="footerBottomContent">
                     <span>Copyright © Travel 2024. All Rights Reserved</span>
                     <span class="footerBottomLinks">
                         <a href="#">Terms of use</a> |
@@ -3486,8 +3580,9 @@
                     </span>
                 </div>
             </div>
-        </footer> -->
-    </div>
+        </div>
+    </footer> -->
+
 </body>
 
 <script src="script.js"></script>
